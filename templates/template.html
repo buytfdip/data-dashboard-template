@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Visualizer Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <style>
+        .center.aligned {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .light-grey-bg {
+        background-color: #e3d7d7;
+        }
+
+    </style>
+</head>
+<body class="light-grey-bg">
+    <div class="ui container">
+        <h1 class="centered">Data Visualizer Template</h1>
+        <div class="ui grid center aligned">
+            <div class="six wide column">
+                <div class="ui raised segment">
+                    <div class="card-body">
+                        <div class="centered" id="plot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="six wide column">
+                <table class="ui table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in filler_data.data %}
+                        <tr>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.age }}</td>
+                            <td>{{ item.country }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <script>
+            var data = {{ fig_json | safe }};
+            Plotly.newPlot('plot', data);
+        </script>
+    </body>
+</html>
