@@ -3,36 +3,32 @@
 <head>
     <title>Data Visualizer Template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <style>
-        .center.aligned {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .centered {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .light-grey-bg {
-        background-color: #e3d7d7;
-        }
-
-    </style>
 </head>
-<body class="light-grey-bg">
+<body>
+    <div class="ui inverted segment">
+        <div class="ui inverted top fixed menu">
+            <div class="item">
+              <img src="https://www.nicepng.com/png/full/138-1386229_data-analytics-icon-black-and-white.png">
+            </div>
+            <a class="item">Home</a>
+            <a class="item">Charts</a>
+            <a class="item">Sign-in</a>
+          </div>
+          <p></p>
+          <p></p>
+    </div>
     <div class="ui container">
         <h1 class="centered">Data Visualizer Template</h1>
-        <div class="ui grid center aligned">
-            <div class="six wide column">
+        <div>
+            <div class="six wide column stackable">
                 <div class="ui raised segment">
                     <div class="card-body">
                         <div class="centered" id="plot"></div>
                     </div>
                 </div>
             </div>
-            <div class="six wide column">
+            <p></p>
+            <div class="six wide column stackable">
                 <table class="ui table">
                     <thead>
                         <tr>
@@ -53,6 +49,7 @@
                 </table>
             </div>
         </div>
+    </div>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
         <script>
@@ -60,4 +57,3 @@
             Plotly.newPlot('plot', data);
         </script>
     </body>
-</html>
