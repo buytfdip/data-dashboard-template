@@ -6,4 +6,4 @@ Uses FastAPI, Jinja2 templating with the Semantic UI framework, plus a mock JSON
 Use it as a blueprint dashboard for data anaylsis projects.
 
 
-![screenshot](https://user-images.githubusercontent.com/36013108/214820406-3153edd2-84f2-4606-8e7c-6d258245cde4.png)
+![screenshot](https://user-images.githubusercontent.com/36013108/214828742-ba27c0c1-7b14-4490-8d08-148cb2901117.png)
