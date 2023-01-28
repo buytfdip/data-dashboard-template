@@ -1,4 +1,4 @@
-# Template to create Data Analysis Dashboards
+# Template to Create Data Analysis Dashboards
 
 
 Uses FastAPI, Jinja2 templating with the Semantic UI framework, plus a mock JSON data feed  and Plotly chart. 
